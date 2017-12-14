@@ -24,4 +24,8 @@ export class VentureService {
     ventureEntryInFirebase.update({supportersCurrent: localUpdatedVenture.supportersCurrent});
   }
 
+  addVenture(newVenture: Venture){
+    this.ventures.push(newVenture);
+  }
+
 }

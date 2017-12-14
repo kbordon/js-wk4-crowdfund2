@@ -1,0 +1,56 @@
+<h3>Sometimes <em>you</em> want to be the one shut up with money!</h3>
+<p>Or, in a less circuitous way of talking to keep with this th-meme, maybe you want also want people to support in your endeavors whatever they may be.</p>
+<p>Fill out the form below, click submit, and consider yourself, "One of us! One of us!"<p>
+
+<div>
+  <div>
+    <p *ngIf="hasFormError === true">You are missing information on your form. Please go back, and submit.</p>
+    <h4>Select the type of Project:</h4>
+    Idea <input name="type" type="radio" (change)="newType='idea'" selected>
+    Project <input name="type" type="radio" (change)="newType='project'">
+    Charity <input name="type" type="radio" (change)="newType='charity'">
+  </div>
+  <br>
+
+  <h4>Then, fill out the form below:</h4>
+
+  <div>
+    <label>Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Creator or Recipient:</label>
+    <br>
+    <input #newCreator>
+  </div>
+
+  <div>
+    <label>Description:</label>
+    <br>
+    <input #newDescription>
+  </div>
+
+  <div>
+    <label>Supporters Needed:</label>
+    <br>
+    <input type="number" #newSupportersGoal>
+  </div>
+
+  <div>
+    <label>Funds Needed:</label>
+    <br>
+    <input type="number" #newFundsGoal>
+  </div>
+
+  <div>
+    <label>Plans:</label>
+    <br>
+    <textarea #newPlans></textarea>
+  </div>
+  <br>
+  <br>
+
+  <button type="button" (click)="submitForm(newTitle.value, newCreator.value, newDescription.value, newSupportersGoal.value, newFundsGoal.value, newPlans.value, newType); newTitle.value=''; newCreator.value=''; newDescription.value=''; newSupportersGoal.value=''; newFundsGoal.value=''; newPlans.value=''" >Submit</button>
+</div>
