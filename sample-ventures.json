@@ -1,0 +1,22 @@
+{
+  "ventures": [{
+    "title": "Take Over Hyrule",
+    "creator": "Ganon",
+    "description": "Bend all off Hyrule and beyond to the glorious destruction of Calamity",
+    "supportersCurrent": 0,
+    "supportersGoal": 100,
+    "fundsGoal": 1000,
+    "fundsCurrent": 0,
+    "ventureType": "idea"
+
+  }, {
+    "title": "Kill the Nexus",
+    "creator": "Summoner",
+    "description": "Destroy the other team's towers, get the dragon, get the inhibs, and kill Teemo.",
+    "supportersCurrent": 0,
+    "supportersGoal": 5,
+    "fundsGoal": 9999,
+    "fundsCurrent": 0,
+    "ventureType": "idea"
+  }]
+}

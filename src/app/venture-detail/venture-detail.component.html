@@ -1,0 +1,7 @@
+<div>
+  <h3>{{(ventureToDisplay | async).title}}</h3>
+  <h4>{{(ventureToDisplay | async).creator}}</h4>
+  <p>{{(ventureToDisplay | async).description}}</p>
+  <p *ngIf="(ventureToDisplay | async).ventureType === 'idea';">supporters: {{(ventureToDisplay | async).supportersCurrent}}/ {{(ventureToDisplay | async).supportersGoal}}</p>
+  <p *ngIf="(ventureToDisplay | async).ventureType === 'charity' || (ventureToDisplay | async).ventureType === 'project';">funds: {{(ventureToDisplay | async).fundsCurrent}}/ {{(ventureToDisplay | async).fundsGoal}}</p>
+</div>
