@@ -29,4 +29,9 @@ export class VentureDetailComponent implements OnInit {
     this.ventureToDisplay = this.ventureService.getVentureById(this.ventureId);
   }
 
+  recievePledge(pledge: number){
+    this.ventureToDisplay.supportersCurrent += pledge;
+    console.log(this.ventureToDisplay.title);
+  }
+
 }

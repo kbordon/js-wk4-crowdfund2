@@ -16,6 +16,7 @@ STUFFF SHOW IT
 <div *ngFor="let venture of ventures | async | filterType:filterByType | filterProgress:filterByProgress">
   <div class="panel-body">
     <h1 (click)="goToDetailPage(venture)">{{venture.title}}</h1> by <h2>{{venture.creator}}</h2>
+    <h3>{{venture.currentSupporters}}</h3>
     <p>
   </div>
 </div>

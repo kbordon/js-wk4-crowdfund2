@@ -15,6 +15,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FilterTypePipe } from './filter-type.pipe';
 import { FilterProgressPipe } from './filter-progress.pipe';
+import { PledgeComponent } from './pledge/pledge.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     ViewAllComponent,
     VentureDetailComponent,
     FilterTypePipe,
-    FilterProgressPipe
+    FilterProgressPipe,
+    PledgeComponent
 
   ],
   imports: [

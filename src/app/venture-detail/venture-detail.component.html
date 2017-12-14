@@ -6,4 +6,6 @@
   <p *ngIf="(ventureToDisplay | async).ventureType === 'charity' || (ventureToDisplay | async).ventureType === 'project';">funds: {{(ventureToDisplay | async).fundsCurrent}}/ {{(ventureToDisplay | async).fundsGoal}}</p>
   <p>{{(ventureToDisplay | async).fundsPlans}}</p>
   <p>Venture type: {{(ventureToDisplay | async).ventureType}}</p>
+  <p>{{(ventureToDisplay | async).supportersCurrent}}</p>
+  <app-pledge [selectedVenture]="ventureToDisplay | async" (pledgeSender)="recievePledge($event)"></app-pledge>
 </div>

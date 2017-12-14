@@ -19,4 +19,9 @@ export class VentureService {
     return this.database.object('ventures/' + ventureId);
   }
 
+  pledgeVenture(localUpdatedVenture){
+    var ventureEntryInFirebase = this.getVentureById(localUpdatedVenture.$key);
+    ventureEntryInFirebase.update({supportersCurrent: localUpdatedVenture.supportersCurrent});
+  }
+
 }
