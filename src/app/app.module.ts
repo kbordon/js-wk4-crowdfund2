@@ -13,6 +13,8 @@ import { VentureDetailComponent } from './venture-detail/venture-detail.componen
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FilterTypePipe } from './filter-type.pipe';
+import { FilterProgressPipe } from './filter-progress.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +28,9 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     ViewAllComponent,
-    VentureDetailComponent
+    VentureDetailComponent,
+    FilterTypePipe,
+    FilterProgressPipe
 
   ],
   imports: [

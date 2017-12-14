@@ -1,6 +1,19 @@
 STUFFF SHOW IT
+<label>Filter by type:</label>
+<select (change)="changeType($event.target.value)">
+  <option value="all" selected>All</option>
+  <option value="charity">Charity</option>
+  <option value="idea">Idea</option>
+  <option value="project">Project</option>
+</select>
+<label>Filter by completion:</label>
+<select (change)="changeProgress($event.target.value)">
+  <option value="all" selected>All</option>
+  <option value="ongoing">Ongoing</option>
+  <option value="success">Goal Reached</option>
+</select>
 
-<div *ngFor="let venture of ventures | async">
+<div *ngFor="let venture of ventures | async | filterType:filterByType | filterProgress:filterByProgress">
   <div class="panel-body">
     <h1 (click)="goToDetailPage(venture)">{{venture.title}}</h1> by <h2>{{venture.creator}}</h2>
     <p>

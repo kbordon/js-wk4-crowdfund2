@@ -14,6 +14,9 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ViewAllComponent implements OnInit {
   ventures: FirebaseListObservable<any[]>;
 
+  filterByType: string = "all";
+  filterByProgress: string = "all";
+
   constructor(private router: Router, private ventureService: VentureService) { }
 
   ngOnInit() {
@@ -23,6 +26,16 @@ export class ViewAllComponent implements OnInit {
 
   goToDetailPage(clickedVenture){
     this.router.navigate(['ventures', clickedVenture.$key]);
+  }
+
+  changeType(selectedOption){
+    this.filterByType = selectedOption;
+    console.log(this.filterByType);
+  }
+
+  changeProgress(selectedOption){
+    this.filterByProgress = selectedOption;
+    console.log(this.filterByProgress);
   }
 
 }

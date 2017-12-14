@@ -4,4 +4,6 @@
   <p>{{(ventureToDisplay | async).description}}</p>
   <p *ngIf="(ventureToDisplay | async).ventureType === 'idea';">supporters: {{(ventureToDisplay | async).supportersCurrent}}/ {{(ventureToDisplay | async).supportersGoal}}</p>
   <p *ngIf="(ventureToDisplay | async).ventureType === 'charity' || (ventureToDisplay | async).ventureType === 'project';">funds: {{(ventureToDisplay | async).fundsCurrent}}/ {{(ventureToDisplay | async).fundsGoal}}</p>
+  <p>{{(ventureToDisplay | async).fundsPlans}}</p>
+  <p>Venture type: {{(ventureToDisplay | async).ventureType}}</p>
 </div>
