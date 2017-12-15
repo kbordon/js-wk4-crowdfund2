@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class ViewAllComponent implements OnInit {
   ventures: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   filterByType: string = "all";
   filterByProgress: string = "all";

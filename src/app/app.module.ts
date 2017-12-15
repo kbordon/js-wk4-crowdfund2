@@ -17,6 +17,8 @@ import { FilterTypePipe } from './filter-type.pipe';
 import { FilterProgressPipe } from './filter-progress.pipe';
 import { PledgeComponent } from './pledge/pledge.component';
 import { AddVentureComponent } from './add-venture/add-venture.component';
+import { AdminComponent } from './admin/admin.component';
+import { EditVentureComponent } from './edit-venture/edit-venture.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +36,9 @@ export const firebaseConfig = {
     FilterTypePipe,
     FilterProgressPipe,
     PledgeComponent,
-    AddVentureComponent
+    AddVentureComponent,
+    AdminComponent,
+    EditVentureComponent
 
   ],
   imports: [

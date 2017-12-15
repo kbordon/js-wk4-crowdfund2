@@ -21,6 +21,6 @@ export class PledgeComponent implements OnInit {
   beginPledge(pledgeAmount){
     this.selectedVenture.supportersCurrent = parseInt(this.selectedVenture.supportersCurrent) + parseInt(pledgeAmount);
     console.log(this.selectedVenture.supportersCurrent);
-    this.ventureService.pledgeVenture(this.selectedVenture);
+    this.ventureService.updateVenture(this.selectedVenture);
   }
 }

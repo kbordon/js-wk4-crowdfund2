@@ -1,7 +1,9 @@
 <div class="wrapper">
-  <h3>Sometimes <em>you</em> want to be the one shut up with money!</h3>
-  <p>Or, in a less circuitous way of talking to keep with this th-meme, maybe you want also want people to support in your endeavors whatever they may be.</p>
-  <p>Fill out the form below, click submit, and consider yourself, "One of us! One of us!"<p>
+  <div *ngIf="currentRoute === '/add'">
+    <h3>Sometimes <em>you</em> want to be the one shut up with money!</h3>
+    <p>Or, in a less circuitous way of talking to keep with this th-meme, maybe you want also want people to support in your endeavors whatever they may be.</p>
+    <p>Fill out the form below, click submit, and consider yourself, "One of us! One of us!"<p>
+  </div>
 
   <div>
     <div>

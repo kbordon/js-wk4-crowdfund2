@@ -28,4 +28,11 @@ export class VentureService {
     this.ventures.push(newVenture);
   }
 
+  updateVenture(localUpdatedVenture){
+    var ventureEntryInFirebase = this.getVentureById(localUpdatedVenture.$key);
+    ventureEntryInFirebase.update({title: localUpdatedVenture.title,
+                                  artist: localUpdatedVenture.creator,
+                                  description: localUpdatedVenture.description});
+  }
+
 }

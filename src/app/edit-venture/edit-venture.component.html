@@ -1,0 +1,14 @@
+<h4>Edit Venture</h4>
+
+<label>New Venture Title:</label>
+<input [(ngModel)]="selectedVenture.title">
+<br>
+
+<label>New Venture Creator:</label>
+<input [(ngModel)]="selectedVenture.creator">
+<br>
+
+<label>New Venture Description:</label>
+<input [(ngModel)]="selectedVenture.description">
+
+<button (click)="beginUpdatingVenture(selectedVenture)">Update</button>

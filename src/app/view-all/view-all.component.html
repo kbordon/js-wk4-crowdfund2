@@ -1,4 +1,3 @@
-STUFFF SHOW IT
 <label>Filter by type:</label>
 <select (change)="changeType($event.target.value)">
   <option value="all" selected>All</option>
@@ -18,6 +17,11 @@ STUFFF SHOW IT
     <h1 (click)="goToDetailPage(venture)">{{venture.title}}</h1> by <h2>{{venture.creator}}</h2>
     <h3>{{venture.currentSupporters}}</h3>
     <p>
+  </div>
+  <div *ngIf="currentRoute === '/admin'">
+    {{venture.description}}
+    <hr>
+    <app-edit-venture [selectedVenture]="venture"></app-edit-venture>
   </div>
 </div>
 

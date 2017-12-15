@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddVentureComponent implements OnInit {
 
+  currentRoute: string = this.router.url;
   hasFormError:boolean = false;
 
   constructor(private router: Router, private ventureService:VentureService) { }
